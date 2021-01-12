@@ -35,7 +35,7 @@
         <data>
             <parameter name="customerId" force="true">%customer_id%</parameter>
         </data>
-    </route>
+    </route> 
 
     <!--  Routing define: wishlist add  new items by ProductSKU: ex.bpghee200gm -->
      <route url="/V1/wishlist/addbysku/:productSku" method="POST">
