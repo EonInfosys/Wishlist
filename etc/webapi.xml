@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- Routing define -->
+    <!-- <route url="/V1/customer/order" method="GET">
+         <service class="EonInfosys\CustomerOrders\Api\OrderInterface" method="getOrdertList"/>
+         <resources>
+            <resource ref="self"/>
+         </resources>
+         <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+         </data>
+    </route> -->
+
+      <!-- Routing define: wishlist get from customer  -->
+    <route url="/V1/wishlist/items" method="GET">
+           <service class="EonInfosys\Wishlist\Api\WishlistManagementInterface" method="getWishlistForCustomer"/>
+           <resources>
+               <resource ref="self" />
+           </resources>
+           <data>
+               <parameter name="customerId" force="true">%customer_id%</parameter>
+           </data>
+       </route>
+
+       <!--  Routing define: wishlist getTotalItems -->
+
+  <route url="/V1/wishlist/info" method="GET">
+        <service class="EonInfosys\Wishlist\Api\WishlistManagementInterface" method="getWishlistInfo"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+
+   <!--  Routing define: wishlist add  new items by Product ID: ex.117 -->
+    <route url="/V1/wishlist/add/:productId" method="POST">
+        <service class="EonInfosys\Wishlist\Api\WishlistManagementInterface" method="addWishlistForCustomer"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+
+    <!--  Routing define: wishlist add  new items by ProductSKU: ex.bpghee200gm -->
+     <route url="/V1/wishlist/addbysku/:productSku" method="POST">
+         <service class="EonInfosys\Wishlist\Api\WishlistManagementInterface" method="addWishlistForCustomerBySku"/>
+         <resources>
+             <resource ref="self" />
+         </resources>
+         <data>
+             <parameter name="customerId" force="true">%customer_id%</parameter>
+         </data>
+     </route>
+
+
+       <!--  Routing define: wishlist DELETE   by "wishlist_item_id": "19"-->
+    <route url="/V1/wishlist/delete/:wishlistItemId" method="DELETE">
+        <service class="EonInfosys\Wishlist\Api\WishlistManagementInterface" method="deleteWishlistForCustomer"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+
+ 
+
+</routes>
