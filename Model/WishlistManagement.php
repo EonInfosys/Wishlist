@@ -71,8 +71,8 @@ class WishlistManagement implements WishlistManagementInterface
     /**
      * Get wishlist collection
      * @deprecated
-     * @param $customerId
-     * @return WishlistData
+      * @param int $customerId
+     * @return int[]
      */
     public function getWishlistForCustomer($customerId)
     {
@@ -168,7 +168,7 @@ class WishlistManagement implements WishlistManagementInterface
      * Delete wishlist item for customer
      * @param int $customerId
      * @param int $productIdId
-     * @return bool|\Magento\Wishlist\Api\status
+     * @return bool
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function deleteWishlistForCustomer($customerId, $wishlistItemId)
@@ -212,12 +212,12 @@ class WishlistManagement implements WishlistManagementInterface
     }
 
 
-    
+
 
    /**
      * Return count of wishlist item for customer
      * @param int $customerId
-     * @return array
+     * @return int[]
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function getWishlistInfo($customerId){

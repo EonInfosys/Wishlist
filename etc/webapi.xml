@@ -1,16 +1,7 @@
 <?xml version="1.0"?>
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
-    <!-- Routing define -->
-    <!-- <route url="/V1/customer/order" method="GET">
-         <service class="EonInfosys\CustomerOrders\Api\OrderInterface" method="getOrdertList"/>
-         <resources>
-            <resource ref="self"/>
-         </resources>
-         <data>
-            <parameter name="customerId" force="true">%customer_id%</parameter>
-         </data>
-    </route> -->
+
 
       <!-- Routing define: wishlist get from customer  -->
     <route url="/V1/wishlist/items" method="GET">
@@ -69,6 +60,6 @@
         </data>
     </route>
 
- 
+
 
 </routes>

@@ -12,7 +12,7 @@ interface WishlistManagementInterface
      * Return Wishlist items.
      *
      * @param int $customerId
-     * @return array
+     * @return int[]
      */
     public function getWishlistForCustomer($customerId);
 
@@ -21,7 +21,7 @@ interface WishlistManagementInterface
      *
      * @param int $customerId
      * @param int $productId
-     * @return array
+     * @return bool
      *
      */
     public function addWishlistForCustomer($customerId,$productId);
@@ -32,7 +32,7 @@ interface WishlistManagementInterface
      *
      * @param int $customerId
      * @param string $productSku
-     * @return array
+     * @return bool
      *
      */
     public function addWishlistForCustomerBySku($customerId,$productSku);
@@ -43,7 +43,7 @@ interface WishlistManagementInterface
      *
      * @param int $customerId
      * @param int $wishlistId
-     * @return status
+     * @return bool
      *
      */
     public function deleteWishlistForCustomer($customerId,$wishlistItemId);
@@ -52,7 +52,7 @@ interface WishlistManagementInterface
      * Return Added wishlist info.
      *
      * @param int $customerId
-     * @return array
+     * @return int[]
      *
      */
     public function getWishlistInfo($customerId);
