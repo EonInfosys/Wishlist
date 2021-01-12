@@ -16,6 +16,11 @@ This allows customers to create a list of products that they can add to their sh
 
 ##
 
+![](doc/CustomerToken01.png)
+![](doc/getWishlistItems.png)
+![](doc/getWishlistTotalInfo.png)
+![](doc/wishlistAdd.png)
+![](doc/wishlistDeleteByWID.png)
 
 
 http://www.magento.lan/rest/default/V1/integration/customer/token?username=matinict@gmail.com&password=matin@123&websiteId=0
